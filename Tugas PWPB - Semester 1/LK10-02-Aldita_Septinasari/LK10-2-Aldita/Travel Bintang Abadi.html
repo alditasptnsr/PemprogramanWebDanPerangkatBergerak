@@ -1,0 +1,120 @@
+<HTML>
+<HEAD><TITLE>Travel Bintang Abadi</TITLE></HEAD>
+<BODY BGCOLOR="lightskyblue">
+<SCRIPT language="JavaScript">
+<!--
+function hitungtotal()
+{
+ var nama = (document.ffrom.inama.value);
+ var tujuan = (document.ffrom.itujuan.value);
+ var kelas = (document.ffrom.ikelas.value);
+ var jumlahtiket = parseFloat(document.ffrom.ijumlah.value);
+ var member = (document.ffrom.imember.value);
+
+ var ht = 0.0;
+ var sub = 0.0;
+ var diskon=0.0;
+ var total =0.0;
+
+ if ((tujuan=="Jakarta")&&(kelas=="Eksekutif"))
+ {
+ 	ht =70000;
+ }
+ else if ((tujuan=="Jakarta")&&(kelas=="Bisnis"))
+  {
+  ht =40000;
+  }
+  else if ((tujuan=="Jakarta")&&(kelas=="Ekonomi"))
+  {
+    ht =10000;
+  }
+ else if ((tujuan=="Solo")&&(kelas=="Eksekutif"))
+ {
+ 	ht =80000;
+ }
+ else if ((tujuan=="Solo")&&(kelas=="Bisnis"))
+ {
+  ht =50000;
+ }
+ else if ((tujuan=="Solo")&&(kelas=="Ekonomi"))
+ {
+  ht =20000;
+ }
+ else if ((tujuan=="Surabaya")&&(kelas=="Eksekutif"))
+ {
+ 	ht =90000;
+ }
+ else if ((tujuan=="Surabaya")&&(kelas=="Bisnis"))
+ {
+  ht =60000;
+ }
+ else if ((tujuan=="Surabaya")&&(kelas=="Ekonomi"))
+ {
+  ht =30000;
+ }
+
+ sub = jumlahtiket*ht;
+
+ if (document.ffrom.imember.checked==true)
+ {
+ 	diskon =0.10*sub;
+ }
+ else
+ {
+ 	diskon=0.0;
+ }
+  total = sub-diskon;
+  document.ffrom.otiket.value=eval(ht);
+  document.ffrom.osub.value=eval(sub);
+  document.ffrom.odiskon.value=eval(diskon);
+  document.ffrom.ototal.value=eval(total);
+  // gunakan untuk mengecek !!! alert (total);
+}
+//--></SCRIPT>
+<FORM NAME="ffrom">
+<table border="1" align="center" width="70%" bgcolor="lightblue">
+	<tr>
+		<td width="100%" colspan="2" bgcolor="lightgray"><H2 ALIGN="center">Travel Bintang Abadi</H2></td>
+	</tr>
+	<tr>
+		<td width="50%" bgcolor="white"><PRE>
+Nama             :<input type="text" name="inama">
+
+Tujuan           :<select name="itujuan" size=1>
+	               <option value="Jakarta">Jakarta</option>
+	               <option value="Solo">Solo</option>
+	               <option value="Surabaya">Surabaya</option>
+				</select>
+
+Kelas            :<select name="ikelas" size=1>
+                 <option value="Eksekutif">Eksekutif</option>
+                 <option value="Bisnis">Bisnis</option>
+                 <option value="Ekonomi">Ekonomi</option>
+        </select>
+
+Jumlah Tiket     :<input type="text" size="11" name="ijumlah">
+
+Member           :<input type="checkbox" name="imember">Ya</td></pre>
+ <td width="50%" colspan="2" bgcolor="white"><pre>
+Harga Tiket      :<input type="text" size="10" name="otiket">
+
+Sub Total        :<input type="text" size="10" name="osub">
+
+Diskon           :<input type="text" size="10" name="odiskon">
+
+Total Bayar      :<input type="text" size="10" name="ototal">
+</td></pre>
+    </tr>
+    <tr>
+    	<td width="100%" colspan="2" bgcolor="azure">
+    	<center>
+    <INPUT TYPE="button" value="Hitung" onclick="hitungtotal()">
+    <INPUT TYPE="reset" value="Ulang">
+    	</center></td>
+    </tr>
+		</PRE></td>
+	</tr>
+</table>
+</FORM>
+</BODY>
+</HTML>

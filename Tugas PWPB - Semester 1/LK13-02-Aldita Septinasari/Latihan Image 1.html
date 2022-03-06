@@ -1,0 +1,33 @@
+<HTML>
+<BODY>
+<SCRIPT LANGUAGE="JavaScript">
+var num=1
+img1 = new Image ()
+img1.src = "gambar/pic1.png"
+img2 = new Image ()
+img2.src = "gambar/pic2.jpg"
+img3 = new Image ()
+img3.src = "gambar/pic3.jpg"
+img4 = new Image ()
+img4.src = "gambar/pic4.png"
+img5 = new Image ()
+img5.src = "gambar/pic5.png"
+img6 = new Image ()
+img6.src = "gambar/pic6.png"
+function slideshow(x)
+{
+num=num+x
+if (num==7)
+{num=1}
+if (num==0)
+{num=6}
+document.mypic.src=eval("img"+num+".src")
+}
+</SCRIPT>
+<CENTER>
+<IMG SRC="gambar/pic1.png" NAME="mypic" BORDER=0 height="200" width="150"><p>
+<A HREF="JavaScript:slideshow(-1)">Previous</A>
+<A HREF="JavaScript:slideshow(1)">Next</A>
+</CENTER>
+</BODY>
+</HTML>

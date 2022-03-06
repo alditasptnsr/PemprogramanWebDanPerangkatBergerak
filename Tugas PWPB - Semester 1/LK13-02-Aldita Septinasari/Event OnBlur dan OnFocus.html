@@ -1,0 +1,66 @@
+<HTML>
+<BODY>
+<SCRIPT LANGUAGE="JavaScript">
+function masukannis()
+{
+if (document.f.inis.value=="")
+	{
+	alert("anda belum memasukkan nis");
+	}
+}
+function masukannama()
+{
+if (document.f.inama.value=="")
+	{
+	alert("anda belum memasukkan nama");
+	}
+}
+function masukanalamat()
+{
+if (document.f.ialamat.value=="")
+	{
+	alert("anda belum memasukkan alamat");
+	}
+}
+function terimakasih()
+{
+if ((document.f.inis.value!="")&&(document.f.inama.value!="")&&(document.f.ialamat.value!=""))
+	{
+	alert("Terima Kasih Telah mengisi Data");
+	}
+	else
+	 alert("Mohon Data Dilengkapi");
+}
+</SCRIPT>
+<h1 align="center">Latihan Event OnFocus dan OnBlur</h1>
+<hr width="600" color="black" noshade size="10">
+<font face="arial">
+<h3 align="center">R E G I S T R A S I</h3>
+<hr width="600" color="black" noshade size="2">
+<CENTER>
+
+<form name="f" method="get">
+<TABLE>
+	<tr>
+		<td width="31%">NIS</td>
+		<td width="7%">:</td>
+		<td width="62%"><input type="text" name="inis" size="9" onFocus="window.status='Silahkan Mengisi NIS Anda';" onBlur="masukannis()"></td>
+	</tr>
+	<tr>
+		<td width="31%">NAMA</td>
+		<td width="7%">:</td>
+		<td width="62%"><input type="text" name="inama" size="23" onFocus="window.status='Silahkan Mengisi Nama Anda';" onBlur="masukannama()"></td>
+	</tr>
+	<tr>
+		<td width="31%">ALAMAT</td>
+		<td width="7%">:</td>
+		<td width="62%"><input type="text" name="ialamat" size="34" onFocus="window.status='Silahkan Mengisi Alamat Anda';" onBlur="masukanalamat()"></td>
+	</tr>
+</TABLE>
+<hr width="600" color="black" noshade size="2">
+<p><input type="BUTTON" value="Kirim" Onclick="terimakasih()">
+	<input type="reset" value="Reset"></p>
+</form>
+</CENTER>
+</BODY>
+</HTML>

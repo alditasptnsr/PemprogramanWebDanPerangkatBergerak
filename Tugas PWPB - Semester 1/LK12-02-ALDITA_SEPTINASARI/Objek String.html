@@ -1,0 +1,31 @@
+<HTML>
+<BODY BGCOLOR="lightblue">
+<H3>Latihan Objek String</H3>
+<SCRIPT LANGUAGE="JavaScript">
+nama ="Shafana Vevica";
+panjang=nama.length;
+n=nama.substring(1,4);
+besar=nama.toUpperCase()
+namakulink=nama.link('shafa.html');
+document.writeln('Namaku adalah = '+ nama +'<BR>');
+document.writeln('Panjang namaku adalah = '+ panjang +' karakter <BR>');
+document.writeln('method BIG = '+ nama.big() +'<BR>');
+document.writeln('method SMALL = '+ nama.small() +'<BR>');
+document.writeln('method SUB = '+ nama.sub() +'<BR>');
+document.writeln('method SUP = '+ nama.sup() +'<BR>');
+document.writeln('method BOLD = '+ nama.bold() +'<BR>');
+document.writeln('method ITALIC = '+ nama.italics() +'<BR>');
+document.writeln('method FONTCOLOR = '+ nama.fontcolor('red') +'<BR>');
+document.write('method LOWERCASE = '+ nama.toLowerCase() +'<BR>');
+document.writeln('method UPPERCASE = '+ besar +'<BR>');
+document.writeln('method SUBSTRING = '+ n +'<BR>');
+document.writeln('method STRIKE = '+ nama.strike() +'<BR>');
+document.writeln('method CharAT = '+ nama.charAt(3) +'<BR>');
+document.writeln('method Link = '+ namakulink +'<BR>');
+document.writeln('Index Huruf c = '+ nama.indexOf("c") +'<BR>');
+awal=nama.indexOf('V');
+akhir=nama.length;
+document.writeln('Kata Yang Tersisa = '+ nama.substring(awal,akhir) +'<BR>');
+</SCRIPT>
+</BODY>
+</HTML>

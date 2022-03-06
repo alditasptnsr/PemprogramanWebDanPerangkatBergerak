@@ -1,0 +1,37 @@
+<HTML>
+<BODY>
+<SCRIPT LANGUAFE="JavaScript">
+
+function g1()
+{
+document.f.imgfan.src="gambar/fanon.gif"
+}
+function g2()
+{
+document.f.imgfan.src="gambar/fanoff.png"
+}
+</SCRIPT>
+</SCRIPT>
+<h1 align="center">Latihan Event OnMouseOver dan OnMouseOut</h1>
+<hr width="600" color="black" noshade size="10">
+<font face="arial">
+<h3 align="center">SELAMAT DATANG</h3>
+<CENTER>
+<form name="f">
+<img Name="logo" src="gambar/logo1.gif" onmouseover="document.logo.src='gambar/logo2.gif';window.status='Motto Jawa Barat'" onmouseout="document.logo.src='gambar/logo1.gif';window.status='Gemah Ripah Repeh Rapih'">
+<h4 align="center">Kalo Kepanasan Tunjuk Kipas Angin Saja</h4>
+<A HREF="latevenonclick.html" onMouseOver="g1()" onMouseOut="g2()">
+<IMAGE NAME="imgfan" src="gambar/fanoff.png" WIDTH=61 HEIGHT=72 BORDER=0>
+</A>
+<p>
+Contoh Link Dengan Even
+</p>
+<A HREF="http://www.google.com" onMouseOver="document.bgColor='#ffcc00';
+onMouseOver=window.status='Ke Website Google.Com'; return true">Google.Com</A><BR>
+<A HREF="http://if.unikom.ac.id" onMouseOver="window.status='oh, jangan deket-deket..';
+return true" onMouseOut="alert('Nah gitu dong'); return true">RPL SMKN 1 Ciamis </A>
+<hr width="600" color="black" noshade size="2">
+</form>
+</CENTER>
+</BODY>
+</HTML>

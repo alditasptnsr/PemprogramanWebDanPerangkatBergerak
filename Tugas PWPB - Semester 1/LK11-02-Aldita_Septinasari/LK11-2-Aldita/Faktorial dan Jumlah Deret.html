@@ -1,0 +1,66 @@
+<HTML>
+<HEAD><TITLE>Faktorial dan Deret</TITLE></HEAD>
+<BODY BGCOLOR="lightskyblue">
+<SCRIPT LANGUAGE="JavaScript">
+<!-- menyembunyikan script dan browser non-JS
+
+function faktorialdanderet()
+{
+	var deret=(document.ffrom.ideret.value);
+	var angka=1;
+	var jumlah=0.0;
+	var faktorial=1;
+	var hasiljumlah="";
+	var hasilfaktorial="";
+	var j="";
+	var f="";
+
+while (angka<=deret)
+{
+	jumlah=jumlah+angka;
+	faktorial=faktorial*angka;
+	angka++
+}
+for (i=1; i<deret; i++)
+{
+	hasiljumlah = hasiljumlah +i+ " + ";
+	t=hasiljumlah+""+deret+"="+faktorial;
+
+	hasilfaktorial = hasilfaktorial +i+ " x ";
+	f=hasilfaktorial+""+"="+faktorial;
+}
+document.ffrom.ojumlah.value=t;
+document.ffrom.ofaktorial.value=f;
+}
+// akhir dari penyembunyian -->
+</SCRIPT>
+<FORM NAME="ffrom">
+<table border="1" align="center" width="70%">
+<tr>
+	<td width="100%" colspan="2">
+	<H2 align="center">Perhitungan Faktorial dan Deret</H2>
+	</td>
+</tr>
+<tr>
+<td width="50%">
+<PRE>
+<br>
+  N         : <input type="text" size=11 name="ideret">
+
+  Faktorial : <input type="text" size=40 name="ofaktorial">
+
+  Jumlah    : <input type="text" size=40 name="ojumlah">
+<br>
+</td></tr>
+<td width="100%" colspan="2">
+<center>
+<input type="button" value="SUBMIT" onclick="faktorialdanderet()">
+<input type="reset" value="RESET">
+</center>
+</FROM>
+</table>
+<center>
+	<font color="green"><b>Aldita Septinasari - XI RPL</b></font>
+</center>
+</BODY>
+</HTML>

@@ -1,0 +1,39 @@
+<html>
+<head>
+<script language="javascript">
+<!--
+var image1=new Image()
+image1.src="gambar/1.png"
+var image2=new Image()
+image2.src="gambar/2.png"
+var image3=new Image()
+image3.src="gambar/3.png"
+//-->
+</script>
+</head>
+<body>
+<center>
+<H2>Penggunaan Objek Image Untuk Membuat SlideShow</H2><hr size=5 color="black">
+<img src="gambar/1.png" name="slide" width="100" height="100">
+<script>
+<!--
+//variable yang akan menaikan hitungan gambar
+var step=1
+
+function slideit(){
+//jika browser tidak mendukung metode dokumen.image maka keluar.
+if (!document.images)
+return
+document.images.slide.src=eval("image"+step+".src")
+if (step<3)
+step++
+else
+step=1
+//memanggil function "slideit()" setiap 1 detik
+setTimeout("slideit()",1000)
+}
+slideit()
+</script>
+<hr size=5 color="black">
+</body>
+</html>

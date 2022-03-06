@@ -1,0 +1,80 @@
+<HTML>
+<HEAD><TITLE>Percabangan IF-ELSE 2</TITLE></HEAD>
+<BODY>
+<SCRIPT language="JavaScript">
+<!--
+function hitungtotal()
+{
+ var nama = (document.ffrom.inama.value);
+ var tujuan = (document.ffrom.itujuan.value);
+ var jumlahtiket = parseFloat(document.ffrom.ijumlah.value);
+ var member = (document.ffrom.imember.value);
+ var ht = 0.0;
+ var sub = 0.0;
+ var diskon=0.0;
+ var total =0.0;
+
+ if (tujuan=="Jakarta")
+ {
+ 	ht =100000;
+ }
+ else if (tujuan=="Cirebon")
+ {
+ 	ht =150000;
+ }
+ else if (tujuan=="Tasikmalaya")
+ {
+ 	ht =200000;
+ }
+ sub = jumlahtiket*ht;
+
+ if (document.ffrom.imember.checked==true)
+ {
+ 	diskon =0.10*sub;
+ }
+ else
+ {
+ 	diskon=0.0;
+ }
+  total = sub-diskon;
+  document.ffrom.otiket.value=eval(ht);
+  document.ffrom.osub.value=eval(sub);
+  document.ffrom.odiskon.value=eval(diskon);
+  document.ffrom.ototal.value=eval(total);
+  // gunakan untuk mengecek !!! alert (total);
+}
+//--></SCRIPT>
+<FORM NAME="ffrom">
+<table border="1" align="center" width="70%">
+	<tr>
+		<td width="100%" colspan="2"><H2 ALIGN="center">Travel Bintang Abadi</H2></td>
+	</tr>
+	<tr>
+		<td width="50%"><PRE>
+Nama             :<input type="text" name="inama">
+Tujuan           :<select name="itujuan" size=1>
+	               <option value="Jakarta">Jakarta</option>
+	               <option value="Cirebon">Cirebon</option>
+	               <option value="Tasikmalaya">Tasikmalaya</option>
+				</select>
+Jumlah Tiket     :<input type="text" size="11" name="ijumlah">
+Member           :<input type="checkbox" name="imember">Ya</td></pre>
+ <td width="50%" colspan="2"><pre>
+Harga Tiket      :<input type="text" size="10" name="otiket">
+Sub Total        :<input type="text" size="10" name="osub">
+Diskon           :<input type="text" size="10" name="odiskon">
+Total Bayar      :<input type="text" size="10" name="ototal"></td></pre>
+    </tr>
+    <tr>
+    	<td width="100%" colspan="2">
+    	<center>
+    <INPUT TYPE="button" value="Hitung" onclick="hitungtotal()">
+    <INPUT TYPE="reset" value="Ulang">
+    	</center></td>
+    </tr>
+		</PRE></td>
+	</tr>
+</table>
+</FORM>
+</BODY>
+</HTML>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data Diri</title>
+	<style>
+
+  form{
+   background:linear-gradient(gray,steelblue);
+   color: white;
+   padding: 15%;
+   margin:auto;
+  }
+ </style>
+</head>
+<body>
+<script languange ="JavaScrpit">
+<!--
+function tekan()
+{
+	var nisstr = (document.ffrom.nis.value);
+	var namastr = (document.ffrom.nama.value);
+	var jeniskelaminstr = (document.ffrom.jeniskelamin.value);
+	var agamastr = (document.ffrom.agama.value);
+	var statusstr = (document.ffrom.status.value);
+	var jurusanstr = (document.ffrom.jurusan.value);
+	var ketstr = (document.ffrom.ket.value);
+	document.ffrom.Onis.value = nisstr;
+	document.ffrom.Onama.value = namastr;
+	document.ffrom.Ojeniskelamin.value = jeniskelaminstr;
+	document.ffrom.Oagama.value = agamastr;
+	document.ffrom.Ostatus.value = statusstr;
+	document.ffrom.Ojurusan.value = jurusanstr;
+	document.ffrom.Oket.value = ketstr;
+}	
+//-->
+</script>
+<form name ="ffrom">
+<H1>Data Diri Peserta Didik Kelas XI RPL</H1><hr color="yellow">
+<PRE>
+NIS                      : <input type="text" size="11" name="nis">
+
+Nama                     : <input type="text" size="25" name="nama">
+
+Jenis Kelamin            : <select name="jeniskelamin" Size="1">
+							<option value="Perempuan"> Perempuan </option>
+							<option value="Laki-Laki"> Laki-Laki </option>
+							<option value="Other"> Other </option>
+</select><br>
+Agama                    : <select name="agama" Size="1">
+							<option value="Islam"> Islam </option>
+							<option value="Khatolik"> Khatolik </option>
+							<option value="Protestan"> Protestan </option>
+							<option value="Hindu"> Hindu </option>
+							<option value="Buddha"> Buddha </option>
+							<option value="Konghucu"> Konghucu </option>
+</select><br>
+Status                   : <input type="radio" value="Punya Pasangan" name="status">Punya Pasangan <input type="radio" value="Jomblo Akut" name="status">Jomblo Akut<br>
+Jurusan                  : <select name="jurusan" Size="1">
+							<option value="Rekayasa Perangkat Lunak"> Rekayasa Perangkat Lunak </option>
+							<option value="Multimedia"> Multimedia </option>
+							<option value="OTKP"> OTKP </option>
+							<option value="Bisnis Daring dan Pemasaran"> Bisnis Daring dan Pemasaran </option>
+							<option value="Tata Boga"> Tata Boga </option>
+							<option value="Perhotelan"> Perhotelan </option>
+							<option value="Akuntansi dan Keuangan Lembaga"> Akuntansi dan Keuangan Lembaga </option>
+						</select><br>
+Komentar                : <textarea name="ket" rows="3"  cols="30"></textarea><br>
+
+<input type="button" value="kirim" onclick="tekan()"> <input type="reset" value="ulang">
+
+<hr color="yellow">
+<H1>Data Diri Peserta Didik yang Diinput</H1><hr color="yellow">
+<PRE>
+NIS                      : <input type="text" size="11" name="Onis">
+
+Nama                     : <input type="text" size="25" name="Onama">
+
+Jenis Kelamin            : <input type="text" name="Ojeniskelamin" size="30">
+
+Agama                    : <input type="text" name="Oagama" size="30">
+
+Status                   : <input type="text" name="Ostatus">
+
+Jurusan                  : <input type="text" name="Ojurusan" size="30">
+
+Komentar                 : <textarea name="Oket" rows="3" cols="30"></textarea>
+
+</form>
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<HTML>
+<HEAD><TITLE>Percangan IF-ELSE 3</TITLE></HEAD>
+<BODY>
+<SCRIPT languange="JavaScript">
+<!--
+function hitungnr()
+{
+	var quis = parseFloat(document.ffrom.iquis.value);
+	var tugas = parseFloat(document.ffrom.itugas.value);
+	var pts = parseFloat(document.ffrom.ipts.value);
+	var pas = parseFloat(document.ffrom.ipas.value);
+	var nr =" ";
+	var ket =" ";
+
+	var na = (0.10*quis)+(0.20*tugas)+(0.30*pts)+(0.40*pas);
+
+	if ((na > 80) && (na <=100))
+	{
+		nr ="A";
+		ket ="Lulus dengan Sangat Baik";
+	}
+	else if ((na > 68) && (na <=80))
+	{
+		nr ="B";
+		ket ="Lulus dengan Baik";
+	}
+	else if ((na > 55) && (na <=68))
+	{
+		nr ="C";
+		ket ="Lulus dengan Cukup";
+	}
+	else if ((na > 38) && (na <=55))
+	{
+		nr ="D";
+		ket ="Lulus dengan Kurang";
+	}
+	else
+	{
+		nr ="E";
+		ket ="Tidak Lulus";
+	}
+
+document.ffrom.ona.value=na;
+document.ffrom.oip.value=nr;
+document.ffrom.oket.value=ket;
+// gunakan untuk mengecek alert (ip+""+na);
+}
+//--></SCRIPT>
+<FORM NAME="ffrom">
+<table border="1" width="100%" ALIGHN="center" >
+	<tr>
+		<td width="100%" colspan="4"><H2 ALIGN="center">Menghitung Nilai Rapor</H2></td>
+	</tr>
+	<tr>
+		<td width="25%">Quis (10%) :<input type="text" size="10" name="iquis"></td>
+		<td width="25%">Tugas (20%) :<input type="text" size="10" name="itugas"></td>
+		<td width="25%">PTS (30%) :<input type="text" size="10" name="ipts"></td>
+		<td width="25%">PAS (40%) :<input type="text" size="10" name="ipas"></td>
+	</tr>
+	<tr>
+		<td width="100%" colspan="4"><P Align="center"> 
+	<INPUT TYPE="button" value="Hitung" onclick="hitungnr()">
+	<INPUT TYPE="reset" value="Ulang"> </p></td>
+	</tr>
+	<tr>
+		<td width="100%" colspan="4" align="center">
+		Nilai Rapor :<input type="text" size="5" name="ona">
+		Predikat    :<input type="text" size="5" name="oip">
+		Keterangan  :<input type="text" size="25" name="oket"></td>
+	</tr>
+</table>
+</FORM>
+</BODY>
+</HTML>

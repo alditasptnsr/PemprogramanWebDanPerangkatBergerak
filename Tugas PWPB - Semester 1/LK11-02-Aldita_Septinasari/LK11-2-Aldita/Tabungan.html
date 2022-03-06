@@ -1,0 +1,52 @@
+<HTML>
+<HEAD><TITLE>Perhitungan Bunga</TITLE></HEAD>
+<BODY>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function hitung()
+{
+	var saldo=parseFloat(document.ffrom.isaldo.value);
+	var bunga=parseFloat(document.ffrom.ibunga.value)/100;
+	var waktu=parseFloat(document.ffrom.iwaktu.value);
+	var hasil="";
+
+	for (i=1; i<=waktu; i++)
+	{
+		saldo= saldo+(saldo*bunga);
+		hasil= hasil+" Saldo Bulan " +i+ "= Rp." +saldo+ "\n";
+	}
+
+  document.ffrom.ohasil.value=hasil;
+// gunakan untuk mengecek !!! alert (total);
+}
+//--></SCRIPT>
+
+<FORM NAME="ffrom">
+<H2><CENTER>PERHITUNGAN SALDO TABUNGAN</CENTER></H2>
+<br>
+<PRE>
+Data Input  :
+
+Saldo       <input type="text" size="20" name="isaldo">
+
+Bunga       <input type="text" size="11" name="ibunga"> %
+
+Waktu       <input type="text" size="7"   name="iwaktu"> Bulan
+
+</PRE>
+<hr>
+<input type="button" value="Hitung" onclick="hitung()">
+<input type="reset" value="Reset">
+<PRE>
+
+Hasil Perhitungan      :
+
+<textarea name="ohasil" rows="15" cols="70">Hasil Perhitungan akan muncul disini</textarea>
+
+</PRE>
+</FORM>
+<center> 
+	<font color="green"> <b>Aldita Septinasari XI-RPL<b>
+	</font></center>
+</BODY>
+</HTML>

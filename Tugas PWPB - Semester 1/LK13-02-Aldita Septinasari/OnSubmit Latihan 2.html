@@ -1,0 +1,86 @@
+<html>
+<body>
+<SCRIPT LANGUAGE="JavaScript">
+function isiform(form)
+{
+ isinama(form);
+ isiemail(form);
+ isikomentar(form);
+ kosongkan(form);
+}
+function kosongkan(form)
+{
+ if((isinama(form) && isiemail(form) && isikomentar(form)))
+ {
+ 	form.submit;
+ }
+ if((isinama(form)== false || isiemail(form)== false || isikomentar(form)== false))
+ {
+ 	salahisi(form);
+ }
+}
+function salahisi(form)
+{
+ var teks ="Ada Keselahan Isian :";
+ if (isinama(form)== false)
+ 	{teks +="\nNama Anda";}
+ if (isiemail(form)==false)
+ 	{teks +="\nEmail Anda";}
+ if (isikomentar(form)==false)
+ 	{teks +="\nKomentar Anda";}
+    alert(teks);
+}
+function isinama(form)
+{
+ if (form.nama.value=="")
+ {return false;}
+ else
+ {return true;}
+}
+function isiemail(form)
+{
+ if((form.email.value=="" || form.email.value.indexOf('@',0)==-1) || form.email.value.indexOf('.')==-1)
+ {return false;}
+ else
+ {return true;}
+}
+function isikomentar(form)
+{
+ if (form.cs.value=="")
+ {return false;}
+ else
+ {return true;}
+}
+</SCRIPT>
+<form name="f" method="post" action="mailto:nastiti.asti89@gmail.com?subject=Form">
+<font face="arial">
+<table align="center">
+	<tr bgcolor="gray">
+		<td colspan="2" align="center"><h1>G u e s t B o o k</h1></td>
+	</tr>
+	<tr bgcolor="peachpuff">
+		<td>Nama Anda :</td>
+		<td><input type="text" value="" name="nama" size="30"></td>
+	</tr>
+	<tr bgcolor="peachpuff">
+		<td>Email Anda :</td>
+		<td><input type="text" value="" name="email" size="30"></td>
+	</tr>
+	<tr bgcolor="peachpuff">
+		<td>Komentar Anda :</td>
+		<td><textarea name="cs" rows="5" cols="50"></textarea></td>
+	</tr>
+	<tr bgcolor="orange">
+		<td colspan="2" align="center">
+		<input type="button" name="thesubmit" value="kirim" onClick="isiform(this.form)">
+		<input type="reset" value="hapus">
+		</td>
+	</tr>
+	<tr bgcolor="gray">
+		<td colspan="2" align="center"><b>Terima Kasih Telah Mengisi Guest Book</b> </td>
+	</tr>
+</table>
+</font>
+</form>
+</body>
+</html>

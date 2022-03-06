@@ -1,0 +1,83 @@
+<HTML>
+<HEAD><TITLE>Kalkulator Sederhana</TITLE>
+<BODY align="center">
+
+	<style>
+		body {background-image: url(bg.jpg);
+			color: black;
+			padding: 15%;
+  			margin: auto;
+        }
+    </style>
+</HEAD>
+
+<body>
+  <H1 align="center">KALKULATOR SEDERHANA</H1>
+  <script language="javascript" src="isi.js"></script>
+  <P><SCRIPT language="JavaScript">
+
+  	<!--
+
+	function tambah()
+	{
+		var bil1 = parseFloat(document.fform.bilangan1.value);
+		if (isNaN (bil1))
+			bil1=0.0;
+		var bil2 = parseFloat(document.fform.bilangan2.value);
+		if (isNaN (bil2))
+			bil2=0.0;
+		var hasil = bil1 + bil2;
+		alert ("Hasil Penjulahan = " + hasil);
+	}
+
+	function kurang()
+	{
+		var bil1 = parseFloat(document.fform.bilangan1.value);
+		if (isNaN (bil1))
+			bil1=0.0;
+		var bil2 = parseFloat(document.fform.bilangan2.value);
+		if (isNaN (bil2))
+			bil2=0.0;
+		var hasil = bil1 - bil2;
+		alert ("Hasil Pengurangan = " + hasil);
+	}
+
+	function kali()
+	{
+		var bil1 = parseFloat(document.fform.bilangan1.value);
+		if (isNaN (bil1))
+			bil1=0.0;
+		var bil2 = parseFloat(document.fform.bilangan2.value);
+		if (isNaN (bil2))
+			bil2=0.0;
+		var hasil = bil1 * bil2;
+		alert ("Hasil Perkalian = " + hasil);
+	}
+
+	function bagi()
+	{
+		var bil1 = parseFloat(document.fform.bilangan1.value);
+		if (isNaN (bil1))
+			bil1=0.0;
+		var bil2 = parseFloat(document.fform.bilangan2.value);
+		if (isNaN (bil2))
+			bil2=0.0;
+		var hasil = bil1 / bil2;
+		alert ("Hasil Pembagian = " + hasil);
+	}
+	//--></SCRIPT></P>
+	<FORM NAME="fform">
+<H1><BR>Memasukkan Data Lewat Keyboard</H1>
+<PRE>
+Bilangan Pertama :<input type="text" size="11" name="bilangan1">
+Bilangan Kedua   :<input type="text" size="11" name="bilangan2">
+</PRE>
+		<P>
+			<INPUT TYPE="button" value="+" onclick="tambah()">
+			<INPUT TYPE="button" value="-" onclick="kurang()">
+			<INPUT TYPE="button" value="X" onclick="kali()">
+			<INPUT TYPE="button" value="/" onclick="bagi()">
+			<INPUT TYPE="reset" value="Ulang">
+	</FORM>
+</BODY>
+</HTML>

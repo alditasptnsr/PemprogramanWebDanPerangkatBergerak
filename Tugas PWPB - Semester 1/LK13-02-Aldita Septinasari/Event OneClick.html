@@ -1,0 +1,30 @@
+<HTML>
+<BODY>
+<SCRIPT LANGUAGE="JavaScript">
+function warna(pilihan)
+{
+alert("Anda Memilih Warna " + pilihan);
+document.bgColor=pilihan;
+}
+</SCRIPT>
+<h1 align="center">Latihan Event OnCLick</h1>
+<hr width="500" color="black" noshade>
+<h3 align="center">Pilih warna favorit anda.</h3>
+<CENTER>
+<FORM>
+<INPUT TYPE="button" VALUE="Biru" onClick="warna('lightblue')">
+<INPUT TYPE="button" VALUE="Pink" onClick="warna('pink')">
+<INPUT TYPE="button" VALUE="Coklat" onClick="warna('burlywood')">
+<INPUT TYPE="button" VALUE="Kelabu" onClick="warna('darkgray')">
+<INPUT TYPE="button" VALUE="Oranye" onClick="warna('peachpuff')">
+<INPUT TYPE="button" VALUE="Putih" onClick="warna('white')">
+</FORM>
+<FORM>
+	<IMG NAME="coolfan" SRC="gambar/fanoff.png" width=61 height=72><BR><BR>
+	<INPUT TYPE="BUTTON" VALUE=" Off " onClick="coolfan.src = 'gambar/fanoff.png' ">
+	<INPUT TYPE="BUTTON" VALUE=" On " onClick="coolfan.src = 'gambar/fanon.gif' ">
+</FORM>
+</CENTER>
+<hr width="500" color="black" noshade>
+</BODY>
+</HTML>
